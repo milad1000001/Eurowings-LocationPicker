@@ -1,0 +1,6 @@
+vite.config.ts
+vitest.config.ts
+.gitignore
+node_modules
+components.d.ts
+dist
