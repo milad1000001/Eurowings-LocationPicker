@@ -1,5 +1,13 @@
 # Eurowings
-
+Thanks for yout attention
+you can find whole project in SRC folder
+i use some packages like debounce and use it in input components
+every package configuration set in vite.config
+i use vue query and handle the api with that
+this project has skeleton, for this reason i set loading timer in Miraj Js and use isLoading for api call
+this Project is response so you can watch it in mobile tablet and desktop
+its respect to mobile first and has unit test
+thanks a lot
 
 ## Recommended IDE Setup
 
