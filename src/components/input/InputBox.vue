@@ -7,7 +7,7 @@
       <label
         aria-label="search-icon"
         title="icon"
-        :for="placeHolder" />
+        :for="id" />
       <input
         aria-label="search"
         name="search"
@@ -18,7 +18,7 @@
         :aria-placeholder="placeHolder"
         :title="id"
         :placeholder="placeHolder"
-        @input="$emit('update:model-value', $event.target.value)" />
+        @input="onInput" />
     </form>
   </div>
 </template>
@@ -32,12 +32,13 @@ export interface IProps{
   id:string;
 }
 
-defineEmits<{(e: 'update:model-value'): void}>();
+const emit = defineEmits<{(e: 'update:model-value', val:string): void}>();
 
-withDefaults(defineProps<IProps>(), {
-  isOrigin: false,
-});
+defineProps<IProps>();
 
+const onInput = (event: Event) => {
+  emit('update:model-value', (event.target as HTMLInputElement).value);
+};
 </script>
 <style lang="postcss" scoped>
 .input{
