@@ -14,8 +14,10 @@ declare module '@vue/runtime-core' {
     ASkeleton: typeof import('./src/components/skeleton/ASkeleton.vue')['default']
     AvailableCard: typeof import('./src/components/available-card/AvailableCard.vue')['default']
     ConnectionLine: typeof import('./src/components/connection-line/ConnectionLine.vue')['default']
+    Container: typeof import('./src/components/container/Container.vue')['default']
     DataTable: typeof import('./src/components/available-card/dataTable.vue')['default']
     Input: typeof import('./src/components/input/Input.vue')['default']
+    InputBox: typeof import('./src/components/input/InputBox.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

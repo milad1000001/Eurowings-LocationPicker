@@ -1,9 +1,12 @@
 { 
+    "rules": {
+        "selector-pseudo-class-no-unknown":null
+    },
     "extends": [
         "stylelint-config-recommended-vue",
         "stylelint-config-prettier",
         "stylelint-config-standard",
         "stylelint-config-css-modules",
         "@ronilaukkarinen/stylelint-a11y/recommended"
-        ] 
-    }
+    ] 
+}

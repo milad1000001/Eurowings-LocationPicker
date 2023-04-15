@@ -1,8 +1,10 @@
 <template>
   <article
+    aria-describedby="available-card"
     class="p-5 pt-7 border rounded-lg"
     :aria-label="`${item.origin} to ${item.destination}`"
-    :class="isBest ? 'border-yellow-400 bg-yellow-100' : ''"
+    title="available-flights"
+    :class="bestOffer ? 'border-yellow-400 bg-yellow-100' : ''"
   >
     <div class="flex justify-center items-center gap-3 relative">
       <DepartureIcon />
@@ -46,14 +48,13 @@
 import { defineProps } from 'vue';
 import DepartureIcon from '../../assets/icons/departure.vue';
 import ArrivalIcon from '../../assets/icons/arrival.vue';
-import ConnectionLine from '../connection-line/ConnectionLine.vue';
 
 export interface IProps{
-  isBest:boolean;
+  bestOffer:boolean;
   item:Record<string, any>;
 }
 
-const props = withDefaults(defineProps<IProps>(), { isBest: false });
+const props = withDefaults(defineProps<IProps>(), { bestOffer: false });
 
 const getCurrency = new Map()
   .set('EUR', '€')

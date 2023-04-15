@@ -22,7 +22,6 @@ module.exports = {
       alias: {
         map: [
           ['@', './src'],
-          ['@utils', './src/utils'],
         ],
       },
     },
