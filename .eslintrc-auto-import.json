@@ -1,5 +1,5 @@
 {
-"globals": {
+  "globals": {
     "Component": true,
     "ComponentPublicInstance": true,
     "ComputedRef": true,
@@ -63,5 +63,5 @@
     "watchEffect": true,
     "watchPostEffect": true,
     "watchSyncEffect": true
-}
+  }
 }
