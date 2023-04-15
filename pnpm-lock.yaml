@@ -5,6 +5,8 @@ specifiers:
   '@rushstack/eslint-patch': ^1.2.0
   '@tanstack/vue-query': ^4.29.1
   '@types/jsdom': ^21.1.0
+  '@types/lodash': ^4.14.194
+  '@types/lodash.debounce': ^4.0.7
   '@types/node': ^18.14.2
   '@vitejs/plugin-vue': ^4.0.0
   '@vue/eslint-config-airbnb': ^7.0.0
@@ -21,6 +23,7 @@ specifiers:
   husky: ^8.0.0
   jsdom: ^21.1.0
   lint-staged: ^13.2.1
+  lodash.debounce: ^4.0.8
   miragejs: ^0.1.47
   npm-run-all: ^4.1.5
   postcss: ^8.4.21
@@ -56,6 +59,8 @@ devDependencies:
   '@rushstack/eslint-patch': 1.2.0
   '@tanstack/vue-query': 4.29.1_vue@3.2.47
   '@types/jsdom': 21.1.1
+  '@types/lodash': 4.14.194
+  '@types/lodash.debounce': 4.0.7
   '@types/node': 18.15.11
   '@vitejs/plugin-vue': 4.1.0_vite@4.2.1+vue@3.2.47
   '@vue/eslint-config-airbnb': 7.0.0_zpc7arfiiryurxcefg24im43wi
@@ -71,6 +76,7 @@ devDependencies:
   husky: 8.0.3
   jsdom: 21.1.1
   lint-staged: 13.2.1
+  lodash.debounce: 4.0.8
   npm-run-all: 4.1.5
   postcss: 8.4.21
   postcss-html: 1.5.0
@@ -564,6 +570,16 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/lodash.debounce/4.0.7:
+    resolution: {integrity: sha512-X1T4wMZ+gT000M2/91SYj0d/7JfeNZ9PeeOldSNoE/lunLeQXKvkmIumI29IaKMotU/ln/McOIvgzZcQ/3TrSA==}
+    dependencies:
+      '@types/lodash': 4.14.194
+    dev: true
+
+  /@types/lodash/4.14.194:
+    resolution: {integrity: sha512-r22s9tAS7imvBt2lyHC9B8AGwWnXaYb1tY09oyLkXDs4vArpYJzw09nj8MLx5VfciBPGIb+ZwG0ssYnEPJxn/g==}
     dev: true
 
   /@types/minimist/1.2.2:
@@ -3143,6 +3159,10 @@ packages:
   /lodash.compact/3.0.1:
     resolution: {integrity: sha512-2ozeiPi+5eBXW1CLtzjk8XQFhQOEMwwfxblqeq6EGyTxZJ1bPATqilY0e6g2SLQpP4KuMeuioBhEnWz5Pr7ICQ==}
     dev: false
+
+  /lodash.debounce/4.0.8:
+    resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
+    dev: true
 
   /lodash.find/4.6.0:
     resolution: {integrity: sha512-yaRZoAV3Xq28F1iafWN1+a0rflOej93l1DQUejs3SZ41h2O9UJBoS9aueGjPDgAl4B6tPC0NuuchLKaDQQ3Isg==}

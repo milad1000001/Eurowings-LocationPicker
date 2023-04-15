@@ -18,27 +18,32 @@
         :aria-placeholder="placeHolder"
         :title="id"
         :placeholder="placeHolder"
-        @input="onInput" />
+        @input="debounceRequest" />
     </form>
   </div>
 </template>
 
 <script setup lang="ts">
+import debounce from 'lodash.debounce';
 
 export interface IProps{
   isOrigin?:boolean;
   modelValue:string;
   placeHolder:string;
   id:string;
+  debounce:number;
 }
 
 const emit = defineEmits<{(e: 'update:model-value', val:string): void}>();
 
-defineProps<IProps>();
+const props = defineProps<IProps>();
 
 const onInput = (event: Event) => {
   emit('update:model-value', (event.target as HTMLInputElement).value);
 };
+
+const debounceRequest = props.debounce ? debounce(onInput, props.debounce) : onInput;
+
 </script>
 <style lang="postcss" scoped>
 .input{

@@ -19,6 +19,7 @@ const getFilteredResult = computed(() => offersAPI.data.value?.data
     <form id="">
       <InputBox
         v-model="originFilterTerms"
+        :debounce="500"
         place-holder="Where From ?"
         id="origin">
         <template #prepend>
@@ -27,6 +28,7 @@ const getFilteredResult = computed(() => offersAPI.data.value?.data
       </InputBox>
       <InputBox
         class="my-4"
+        :debounce="500"
         v-model="destinationFilterTerms"
         place-holder="Where To ?"
         id="destination">
